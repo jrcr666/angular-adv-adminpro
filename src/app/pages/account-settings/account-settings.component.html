@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="r-panel-body">
+          <h4>Seleccione un tema</h4>
+          <ul id="themecolors" class="m-t-20">
+            <li><b>Con el sidebar claro</b></li>
+            <li *ngFor="let theme of lightThemes; index as i">
+              <a (click)="changeTheme(theme)" [attr.data-theme]="theme" [ngClass]="getClasses(theme)">
+              </a>
+            </li>
+            <li class="d-block m-t-30"><b>Con el sidebar oscuro</b></li>
+            <li *ngFor="let theme of darkThemes; index as i">
+              <a (click)="changeTheme(theme)" [attr.data-theme]="theme" [ngClass]="getClasses(theme)">
+
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
